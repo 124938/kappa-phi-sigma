@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: dementia-care-servie
+
+  data:
+    mongodb:
+      uri: mongodb+srv://dementia-user:PlmQaz12345@cluster0.aphxo96.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: dementia_local
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
