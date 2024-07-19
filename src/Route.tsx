@@ -3,6 +3,8 @@ import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Stories from "./pages/Stories";
+import CareTaker from "./pages/CareTaker";
+import FamilyMember from "./pages/FamilyMember";
 import { useAuth } from "./contexts/AuthContextProvider";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
     path: "/stories",
     element: <Stories />,
   },
+  {
+    path: "/caretaker",
+    element: <CareTaker />,
+  },
+  {
+    path: "/familymember",
+    element: <FamilyMember />,
+  }
 ]);
 const Route = () => {
   const { setUser } = useAuth();
