@@ -10,6 +10,8 @@ const Navbar = () => {
   const signup = async () => {
     try {
       const signedUser = await signInWithPopup(auth, provider);
+      console.log("signedUser :");
+      console.log(signedUser);
       try {
         await setDoc(doc(db, "users", signedUser.user.uid), {
           name: signedUser.user.displayName,
@@ -17,6 +19,7 @@ const Navbar = () => {
         setUser({
           uid: signedUser.user.uid,
           name: signedUser.user.displayName,
+          email: signedUser.user.email,
         });
         navigate("/");
         return signedUser;

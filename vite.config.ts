@@ -8,6 +8,7 @@ export default defineConfig({
     alias: [{ find: "@", replacement: "/src" }],
   },
   server: {
+    cors:true,
     watch: {
       usePolling: true,
     },
